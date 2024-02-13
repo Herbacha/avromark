@@ -2,6 +2,9 @@
 
 Avromark is a command-line tool that renders an avro schema into a nice-to-read Markdown table, ideal to use for documentation.
 
+## State
+This project is under construction, the main features are missing.
+
 ## Installation
 
 Get the compiled program from the releases page, and copy it locally.
