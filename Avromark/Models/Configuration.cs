@@ -11,7 +11,9 @@ namespace Avromark.Models
     public class Configuration
     {
         /// <summary>Name of the file to convert to markdown</summary>
-        public string FileName { get; private set; }
+        public string InputFileName { get; private set; }
+        /// <summary>Name of the output file</summary>
+        public string OutputFileName { get; private set; }
 
         /// <summary>Option to compress type names</summary>
         public bool CompressTypesName { get; private set; }
@@ -21,7 +23,8 @@ namespace Avromark.Models
 
         public Configuration(Dictionary<string, object> values)
         {
-            FileName = values[nameof(ArgumentsConstants.FILE_PARAMETER)].ToString();
+            InputFileName = values[nameof(ArgumentsConstants.FILE_PARAMETER)].ToString() ?? throw new NullReferenceException();
+            OutputFileName = values[nameof(ArgumentsConstants.OUTPUT_PARAMETER)].ToString() ?? throw new NullReferenceException();
 
             CompressTypesName = values.ContainsKey(nameof(ArgumentsConstants.COMPRESS_TYPE_PARAMETER));
 

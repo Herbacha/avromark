@@ -15,6 +15,12 @@ namespace Avromark.Constants
         /// <summary>Parameter preceding a file name, short version.</summary>
         public const string FILE_SHORT_PARAMETER = "-f";
 
+        /// <summary>Parameter preceding a file name.</summary>
+        public const string OUTPUT_PARAMETER = "--output";
+
+        /// <summary>Parameter preceding a file name, short version.</summary>
+        public const string OUTPUT_SHORT_PARAMETER = "-o";
+
 
         /// <summary>Parameter preceding a file name.</summary>
         public const string COMPRESS_TYPE_PARAMETER = "--compress-type";
@@ -29,11 +35,13 @@ namespace Avromark.Constants
             {
                 { FILE_PARAMETER, nameof(FILE_PARAMETER) },
                 { FILE_SHORT_PARAMETER, nameof(FILE_PARAMETER) },
+                { OUTPUT_PARAMETER, nameof(OUTPUT_PARAMETER) },
+                { OUTPUT_SHORT_PARAMETER, nameof(OUTPUT_PARAMETER) },
                 { COMPRESS_TYPE_PARAMETER, nameof(COMPRESS_TYPE_PARAMETER) },
                 { MANDATORY_COLUMN_PARAMETER, nameof(MANDATORY_COLUMN_PARAMETER) }
             };
 
         /// <summary>A list of arguments followed by a value that needs to be stored. Any argument not in this list is just evaluated as "true" if the argument exists.</summary>
-        public static readonly List<string> ArgumentsWithValue = new() { nameof(FILE_PARAMETER) };
+        public static readonly List<string> ArgumentsWithValue = new() { nameof(FILE_PARAMETER), nameof(OUTPUT_PARAMETER) };
     }
 }

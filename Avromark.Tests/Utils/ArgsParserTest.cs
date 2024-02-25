@@ -18,7 +18,7 @@ namespace Avromark.Tests.Utils
 
             // Assertions
 
-            result.FileName.Should().Be("myfile.avsc");
+            result.InputFileName.Should().Be("myfile.avsc");
             result.MandatoryColumn.Should().Be(false);
             result.CompressTypesName.Should().Be(false);
         }
@@ -32,7 +32,7 @@ namespace Avromark.Tests.Utils
 
             // Assertions
 
-            result.FileName.Should().Be("myfile.avsc");
+            result.InputFileName.Should().Be("myfile.avsc");
             result.MandatoryColumn.Should().Be(false);
             result.CompressTypesName.Should().Be(false);
         }

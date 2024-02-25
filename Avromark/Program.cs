@@ -11,7 +11,11 @@ namespace Avromark
 
             var resultMarkdown = new MakdownFactory(configuration).GenerateMarkdown();
 
+            File.WriteAllText(configuration.OutputFileName, resultMarkdown);
+
             Console.WriteLine(resultMarkdown);
+
+            
         }
     }
 }
